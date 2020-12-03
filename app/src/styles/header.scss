@@ -1,0 +1,66 @@
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+.header {
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 16px 32px;
+  height: 80px;
+
+  &__title {
+    font-size: 32px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+  }
+
+  nav {
+    margin-left: auto;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      position: relative;
+    }
+
+    li:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: yellow;
+    }
+  }
+
+  &__cart-icon {
+    width: 32px;
+  }
+
+  &__basket-items {
+    position: absolute;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    left: 45%;
+    top: -12px;
+    justify-content: center;
+    font-weight: 700;
+    align-items: center;
+  }
+}

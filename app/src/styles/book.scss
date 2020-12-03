@@ -1,0 +1,46 @@
+.book {
+  text-align: center;
+  margin-bottom: 32px;
+
+  &__title {
+    margin-top: 12px;
+  }
+
+  &__description {
+    text-align: left;
+  }
+
+  &__button {
+    background: #333;
+    padding: 8px 16px;
+    width: 100%;
+    color: #fff;
+    border-radius: 16px;
+
+    &--active {
+      background: #1fab2e;
+      color: #fff;
+      border: 1px solid #1fab2e;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.filter__button {
+  background: none;
+  padding: 8px 16px;
+  color: #484848;
+  border-radius: 48px;
+  min-width: 120px;
+  border: 1px solid #484848;
+
+  &--active {
+    border: 1px solid #1fab2e;
+    background: #1fab2e;
+    color: #fff;
+  }
+}

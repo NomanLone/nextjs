@@ -1,0 +1,118 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.cart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 20px 0 rgba(#000, 0.24);
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  transform: translateX(100%);
+  z-index: 10;
+  transition: all 1s;
+  background: #fff;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  &--expanded {
+    transform: translateX(0%);
+    overflow-y: auto;
+  }
+
+  &__header {
+    border-bottom: 1px solid #f1efe6;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-title {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #484848;
+  }
+
+  &__header-close-icon {
+    width: 28px;
+    height: 28px;
+    color: #484848;
+  }
+
+  &__products {
+    padding: 32px 16px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid #f1efe6;
+  }
+
+  &__item-image {
+    width: 80px;
+    margin-right: 12px;
+  }
+
+  &__item-price {
+    margin-left: auto;
+  }
+
+  &__item-quantity {
+    border: 2px groove #333;
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: auto;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  &__total-label,
+  &__total-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #484848;
+  }
+
+  &__order {
+    margin-top: 16px;
+    background: #333;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+     
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.cart-active {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}

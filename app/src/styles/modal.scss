@@ -1,0 +1,36 @@
+.modal {
+  &__order {
+    background: #fff;
+    padding: 15px;
+    width: 600px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  &__title {
+    color: #484848;
+    text-align: center;
+  }
+
+  &__close {
+    color: #333;
+    margin-left: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.modal-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
